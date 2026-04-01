@@ -328,3 +328,362 @@
 // document.writeln("Net Amount Payable (within Due Date): " + netAmountPayable.toFixed(2) + "<br>");
 // document.writeln("Late Payment Surcharge: " + latePaymentSurcharge.toFixed(2) + "<br>");
 // document.writeln("Gross Amount Payable (after Due Date): " + grossAmountPayable.toFixed(2) + "<br>");
+
+
+
+// ////////////////////CHAP 35-38 ///////////
+// task 1//////////////
+// function displayCurrentDateTime() {
+//     var currentDate = new Date();
+//     document.writeln("Current date and time: " + currentDate);
+// }
+// displayCurrentDateTime();
+
+// task 2//////////////
+// function greetUser(firstName, lastName) {
+//     var fullName = firstName + " " + lastName;
+//     alert("Hello, " + fullName + "!");
+// }
+// var firstName = prompt("Enter your first name:");
+// var lastName = prompt("Enter your last name:");
+// greetUser(firstName, lastName);
+
+// task 3//////////////
+// function addNumbers(num1, num2) {
+//     return num1 + num2;
+// }
+// var number1 = parseFloat(prompt("Enter the first number:"));
+// var number2 = parseFloat(prompt("Enter the second number:"));
+// var sum = addNumbers(number1, number2);
+// document.writeln("The sum of " + number1 + " and " + number2 + " is: " + sum);
+
+// task 4//////////////
+// function calculator(num1, num2, operator) {
+//     var result;
+//     switch (operator) {
+//         case "+":
+//             result = num1 + num2;
+//             break;
+//         case "-":
+//             result = num1 - num2;
+//             break;
+//         case "*":
+//             result = num1 * num2;
+//             break;
+//         case "/":
+//             result = num1 / num2;
+//             break;
+//         case "%":
+//             result = num1 % num2;
+//             break;
+//     }
+//     return result;
+// }
+// var number1 = parseFloat(prompt("Enter the first number:"));
+// var number2 = parseFloat(prompt("Enter the second number:"));
+// var operator = prompt("Enter the operator (+, -, *, /, %):");
+// var result = calculator(number1, number2, operator);
+// document.writeln("The result of " + number1 + " " + operator + " " + number2 + " is: " + result);
+
+// task 5//////////////
+// function square(num){
+//     return num * num;
+// }
+// let number = parseFloat(prompt("Enter a number to find its square:"));
+// let squareValue = square(number);
+// document.writeln("The square of " + number + " is: " + squareValue);
+
+// task 6//////////////
+// function factorial(num) {
+//     if (num === 0 || num === 1) {
+//         return 1;
+//     } else {
+//         return num * factorial(num - 1);
+//     }
+// }
+// let number = parseInt(prompt("Enter a number to find its factorial:"));
+// let factorialValue = factorial(number);
+// document.writeln("The factorial of " + number + " is: " + factorialValue);
+
+// task 7//////////////
+// function countNumbers(start, end) {
+//     document.writeln("Counting from " + start + " to " + end + ":<br>");
+//     for (var i = start; i <= end; i++) {
+//         document.writeln(i + "<br>");
+//     }
+// }
+// var startNum = parseInt(prompt("Enter the starting number:"));
+// var endNum = parseInt(prompt("Enter the ending number:"));
+// countNumbers(startNum, endNum);
+
+// task 8//////////////
+// function calculateHypotenuse(base, perpendicular) {
+//     function calculateSquare(num) {
+//         return num * num;
+//     }
+//     var baseSquare = calculateSquare(base);
+//     var perpendicularSquare = calculateSquare(perpendicular);
+//     var hypotenuseSquare = baseSquare + perpendicularSquare;
+//     return Math.sqrt(hypotenuseSquare);
+// }
+// var base = parseFloat(prompt("Enter the base of the right-angled triangle:"));
+// var perpendicular = parseFloat(prompt("Enter the perpendicular of the right-angled triangle:"));
+// var hypotenuse = calculateHypotenuse(base, perpendicular);
+// document.writeln("The hypotenuse of the right-angled triangle is: " + hypotenuse.toFixed(2));    
+
+// task 9//////////////
+// function calculateArea(width, height) {
+//     return width * height;
+// }
+// let width = parseFloat(prompt("Enter the width of the rectangle:"));
+// let height = parseFloat(prompt("Enter the height of the rectangle:"));
+// let area = calculateArea(width, height);
+// document.writeln("The area of the rectangle is: " + area);
+
+// task 10//////////////
+// function isPalindrome(str) {
+//     var cleanedStr = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase(); 
+//     var reversedStr = cleanedStr.split("").reverse().join("");
+//     return cleanedStr === reversedStr;
+// }
+// var userInput = prompt("Enter a string to check if it's a palindrome:");
+// var isPalin = isPalindrome(userInput);
+// document.writeln("Is '" + userInput + "' a palindrome? " + isPalin);
+
+// ///////task 11//////
+// function capitalizeWords(str) {
+//   let words = str.split(" ");
+//   let result = [];
+//   for (let i = 0; i < words.length; i++) {
+//     let word = words[i];
+//     let capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+//     result.push(capitalized);
+//   }
+//   return result.join(" ");
+// }
+// console.log(capitalizeWords("the quick brown fox"));
+
+// task 12//////////////
+// function findLongestWord(str) {
+//     let words = str.split(" ");
+//     let longestWord = ""; 
+//     for (let i = 0; i < words.length; i++) {
+//         if (words[i].length > longestWord.length) {
+//             longestWord = words[i];
+//         }
+//     }
+//     return longestWord;
+// }
+// let userInput = prompt("Enter a string to find the longest word:");
+// let longest = findLongestWord(userInput);
+// document.writeln("The longest word in the string is: " + longest);
+
+// task 13//////////////
+// function countOccurrences(str, letter) {
+//     let count = 0;  
+//     for (let i = 0; i < str.length; i++) {
+//         if (str.charAt(i).toLowerCase() === letter.toLowerCase()) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }
+// let userInput = prompt("Enter a string:");
+// let letterToCount = prompt("Enter a letter to count its occurrences:");
+// let occurrences = countOccurrences(userInput, letterToCount);
+// document.writeln("The letter '" + letterToCount + "' occurs " + occurrences + " times in the string.");
+
+// task 14//////////////
+// function calcCircumfrence(radius){
+//   let circumfrence = 2 * Math.PI * radius;
+//   return circumfrence;
+
+// }
+// function calcArea (radius){let area = Math.PI * radius * radius;
+//   return area;
+// }
+// let radius = parseFloat(prompt("Enter the radius of the circle:"));
+// let circumfrence = calcCircumfrence(radius);
+// let area = calcArea(radius);
+// document.writeln("the circumfrence of the circle is :" + circumfrence.toFixed(2)+ );
+// document.writeln("the area of the circle is :" + area.toFixed(2) );
+
+
+// chap 38-42 ///////////
+// task 1//////////////
+// function power(base, exponent) {
+//     return Math.pow(base, exponent);
+// }
+// let base = parseFloat(prompt("Enter the base number:"));
+// let exponent = parseFloat(prompt("Enter the exponent:"));
+// let result = power(base, exponent);
+// document.writeln(base + " raised to the power of " + exponent + " is: " + result);
+
+
+// task 2//////////////
+// function isLeapYear(year) {
+//     if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// let year = parseInt(prompt("Enter a year:"));
+// let isLeap = isLeapYear(year);
+// document.writeln(year + " is " + (isLeap ? "" : "not ") + "a leap year.");
+
+// task 3//////////////
+// function calculateS(a, b, c) {
+//     return (a + b + c) / 2;
+// }
+// function calculateArea(a, b, c) {
+//     let s = calculateS(a, b, c);
+//     return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+// }
+// let a = parseFloat(prompt("Enter the first side of the triangle:"));
+// let b = parseFloat(prompt("Enter the second side of the triangle:"));
+// let c = parseFloat(prompt("Enter the third side of the triangle:"));
+// let area = calculateArea(a, b, c);
+// document.writeln("The area of the triangle is: " + area.toFixed(2));
+
+// task 4//////////////
+// function calculatePercentage(marksObtained, totalMarks) {
+//     let percentage = (marksObtained / totalMarks) * 100;
+//     return percentage;
+// }
+// function calculateAverage(marksObtained, totalMarks) {
+//     let average = marksObtained / totalMarks;
+//     return average;
+// }
+
+// function calculateGrade(percentage) {
+//     let grade;
+//     if (percentage >= 90) {
+//         grade = "A+";
+//     } else if (percentage >= 80) {
+//         grade = "A";
+//     }
+//     else if (percentage >= 70) {
+//         grade = "B";
+//     }
+//     else if (percentage >= 60) {
+//         grade = "C";
+//     } 
+//     else if (percentage >= 50) {
+//         grade = "D";
+//     }
+//     else {
+//         grade = "F";
+//     }
+//     return grade;
+// }
+// let marksObtained = parseFloat(prompt("Enter the marks obtained:"));  
+// let totalMarks = parseFloat(prompt("Enter the total marks:"));
+// let percentage = calculatePercentage(marksObtained, totalMarks);
+// let average = calculateAverage(marksObtained, totalMarks);
+// let grade = calculateGrade(percentage);
+// document.writeln("Marks Obtained: " + marksObtained + "<br>");
+// document.writeln("Total Marks: " + totalMarks + "<br>");
+// document.writeln("Percentage: " + percentage.toFixed(2) + "%<br>");
+// document.writeln("Average: " + average.toFixed(2) + "<br>");
+// document.writeln("Grade: " + grade);
+
+
+// task 5//////////////
+// function findIndexOfCharacter(str, char) {
+//     for (let i = 0; i < str.length; i++) {
+//         if (str.charAt(i) === char) {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// let userInput = prompt("Enter a string:");
+// let charToFind = prompt("Enter a character to find its index:");
+// let index = findIndexOfCharacter(userInput, charToFind);
+// if (index !== -1) {
+//     document.writeln("The index of '" + charToFind + "' in the string is: " + index);
+// } else {
+//     document.writeln("Character '" + charToFind + "' not found in the string.");
+// } 
+
+// task 6//////////////
+// function removeVowels(str) {
+//     return str.replace(/[aeiouAEIOU]/g, '');
+// }
+// let userInput = prompt("Enter a string:");
+// let result = removeVowels(userInput);
+// document.writeln("The string without vowels is: " + result);
+
+// task 7//////////////
+// function findOccurrences(str, letter) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {        if (str.charAt(i).toLowerCase() === letter.toLowerCase()) {
+//             count++;
+//         }
+//     }
+//     return count;
+// }   
+// let userInput = prompt("Enter a string:");
+// let letterToCount = prompt("Enter a letter to count its occurrences:");
+// let occurrences = findOccurrences(userInput, letterToCount);
+// document.writeln("The letter '" + letterToCount + "' occurs " + occurrences + " times in the string.");
+
+// task 8//////////////
+// let distance = parseFloat(prompt("Enter the distance between two cities in kilometers:"));
+// function convertToMeters(km) {
+//     return km * 1000;
+// }
+// function convertToFeet(km) {
+//     return km * 3280.84;
+// }
+// function convertToInches(km) {
+//     return km * 39370.1;
+// }
+// function convertToCentimeters(km) {
+//     return km * 100000;
+// }
+// let distanceInMeters = convertToMeters(distance);
+// let distanceInFeet = convertToFeet(distance);
+// let distanceInInches = convertToInches(distance);
+// let distanceInCentimeters = convertToCentimeters(distance);
+// document.writeln("Distance in kilometers: " + distance + " km<br>");
+// document.writeln("Distance in meters: " + distanceInMeters + " m<br>");
+// document.writeln("Distance in feet: " + distanceInFeet.toFixed(2) + " ft<br>");
+// document.writeln("Distance in inches: " + distanceInInches.toFixed(2) + " in<br>");
+// document.writeln("Distance in centimeters: " + distanceInCentimeters + " cm<br>");
+
+// task 9//////////////
+// function calculateOvertimePay(hoursWorked) {
+//     let overtimeHours = hoursWorked - 40;
+//     if (overtimeHours > 0) {
+//         return overtimeHours * 12;
+//     } else {
+//         return 0;
+//     }
+// }
+// let hoursWorked = parseFloat(prompt("Enter the number of hours worked:"));
+// let overtimePay = calculateOvertimePay(hoursWorked);
+// document.writeln("Overtime pay: " + overtimePay.toFixed(2) + " currency units");
+
+
+// task 10//////////////
+// function calculateCurrencyNotes(amount) {
+//     let notes100 = Math.floor(amount / 100);    amount = amount % 100;
+//     let notes50 = Math.floor(amount / 50);      amount = amount % 50;
+//     let notes10 = Math.floor(amount / 10);      amount = amount % 10;
+//     return {
+//         notes100: notes100,
+//         notes50: notes50,
+//         notes10: notes10
+//     };
+// }
+// let amount = parseInt(prompt("Enter the amount to withdraw:"));
+// let notes = calculateCurrencyNotes(amount);
+// document.writeln("You will receive:<br>");
+// document.writeln(notes.notes100 + " hundred notes<br>");
+// document.writeln(notes.notes50 + " fifty notes<br>");
+// document.writeln(notes.notes10 + " ten notes<br>");
+
+
+
